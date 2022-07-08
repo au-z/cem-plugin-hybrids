@@ -7,20 +7,66 @@
       "path": "my-element.js",
       "declarations": [
         {
-          "kind": "class",
+          "kind": "variable",
           "description": "",
           "name": "MyElement",
+          "tag": "my-element",
           "members": [
             {
               "kind": "field",
-              "name": "someField",
-              "default": "",
-              "foo": "Some custom information!"
+              "name": "str",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "num",
+              "type": {
+                "text": "number"
+              },
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "bool",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "noDefault",
+              "default": "undefined",
+              "attribute": "no-default"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "42"
+            },
+            {
+              "kind": "field",
+              "name": "descriptor",
+              "type": {
+                "text": "string"
+              },
+              "default": ""
+            },
+            {
+              "kind": "field",
+              "name": "getset",
+              "type": {
+                "text": "string"
+              },
+              "default": "default"
             }
           ],
-          "superclass": {
-            "name": "HTMLElement"
-          },
           "customElement": true
         }
       ],
