@@ -1,10 +1,10 @@
 {
-  "schemaVersion": "0.1.0",
+  "schemaVersion": "1.0.0",
   "readme": "",
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "my-element.js",
+      "path": "default.js",
       "declarations": [
         {
           "kind": "variable",
@@ -76,7 +76,7 @@
           "name": "MyElement",
           "declaration": {
             "name": "MyElement",
-            "module": "my-element.js"
+            "module": "default.js"
           }
         }
       ]

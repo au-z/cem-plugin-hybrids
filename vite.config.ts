@@ -5,7 +5,11 @@ export default defineConfig({
     emptyOutDir: false,
     lib: {
       entry: './src/index.js',
-      name: 'cem-plugin-hybrids',
+      name: 'CemPluginHybrids',
+      fileName: 'cem-plugin-hybrids',
     },
+    rollupOptions: {
+      external: ['typescript'],
+    }
   },
 });

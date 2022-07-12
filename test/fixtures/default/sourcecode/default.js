@@ -1,14 +1,10 @@
 import { define } from 'hybrids';
 
-const composed = {
+export const MyElement = define({
+  tag: 'my-element',
   str: '',
   num: 0,
   bool: false,
-};
-
-export const MyElement = define({
-  tag: 'my-element',
-  ...composed,
   noDefault: undefined,
   value: { value: 42 },
   descriptor: {

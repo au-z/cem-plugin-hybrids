@@ -51,6 +51,28 @@ export const getReturnValue = (returnStatement) => {
   return value?.split?.(' ')?.[0];
 };
 
+/**
+ * Extract Hybrids descriptor properties from their AST initializer node
+ * @param {ASTNode} node the Descriptor initializer node
+ * @returns {value, getter, setter, connect, observe} nodes
+ */
+export function extractDescriptorProperties(node) {
+  let value = null;
+  let getter = null;
+  let setter = null;
+  let connect = null;
+  let observe = null;
+  for (let property of node?.properties) {
+    value = property.name?.getText() === 'value' ? property : value;
+    getter = property.name?.getText() === 'get' ? property : getter;
+    setter = property.name?.getText() === 'set' ? property : setter;
+    connect = property.name?.getText() === 'connect' ? property : connect;
+    observe = property.name?.getText() === 'observe' ? property : observe;
+  }
+
+  return { value, getter, setter, connect, observe }
+}
+
 export const toKebabCase = (str) => {
   return str
     .split('')

@@ -1,13 +1,13 @@
 {
-  "name": "cem-plugin-template",
-  "version": "1.0.0",
+  "name": "@auzmartist/cem-plugin-hybrids",
+  "version": "0.1.0",
   "description": "",
   "type": "module",
-  "main": "src/index.js",
+  "main": "./dist/cem-plugin-hybrids.umd.js",
   "exports": {
     ".": {
-      "import": "./dist/cem-plugin-template.es.js",
-      "require": "./dist/cem-plugin-template.umd.js"
+      "import": "./dist/cem-plugin-hybrids.es.js",
+      "require": "./dist/cem-plugin-hybrids.umd.js"
     }
   },
   "files": [
@@ -16,9 +16,9 @@
   "scripts": {
     "prepublishonly": "npm run build",
     "build": "vite build",
-    "dev": "nodemon --watch src --exec 'npm run test'",
+    "build:watch": "vite build --watch",
     "start": "nodemon dev.js",
-    "test": "uvu test"
+    "test": "vitest"
   },
   "keywords": [
     "custom-elements",
@@ -27,16 +27,18 @@
     "customelements",
     "webcomponents",
     "customelementsjson",
-    "customelementsmanifest"
+    "customelementsmanifest",
+    "hybrids"
   ],
-  "author": "",
+  "author": "Austin Martin (auz.martin@gmail.com)",
   "license": "ISC",
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.1.14",
+    "@custom-elements-manifest/analyzer": "link:..\\custom-elements-manifest\\packages\\analyzer",
     "globby": "^11.0.3",
     "nodemon": "^2.0.7",
     "typescript": "^4.3.2",
     "uvu": "^0.5.1",
-    "vite": "^2.9.13"
+    "vite": "^2.9.13",
+    "vitest": "^0.17.1"
   }
 }

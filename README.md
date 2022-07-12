@@ -13,10 +13,10 @@ npm i -D @auzmartist/cem-plugin-hybrids
 `custom-elements-manifest.config.js`:
 
 ```js
-import myPlugin from 'cem-plugin-template';
+import CemPluginHybrids from 'cem-plugin-hybrids';
 
 export default {
-  plugins: [myPlugin()],
+  plugins: [CemPluginHybrids()],
 };
 ```
 
